@@ -1,0 +1,6 @@
+<div class="col-xs-12">
+  <div class="row" *ngFor="let mail of emails; let idx = index">
+    <input type="checkbox" id="{{ mail }}" name="{{ mail }}" [checked]="idx === 0" (change)="mailToggle($event)">
+    <label for="{{ mail }}">{{ mail }}</label>
+  </div>
+</div>
