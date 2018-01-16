@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 const EMAILS = ['francois.regis.lancien@gmail.com', 'alexia.jouvancelebail@gmail.com', 'ln56@hotmail.fr', 'fran.kerh@live.fr'];
 
@@ -12,12 +12,14 @@ export class MailChooserComponent implements OnInit {
 
   private emails: string[] = EMAILS;
   private selectedEmails: string[] = [];
+  @Output() mailUpdated = new EventEmitter();
 
   constructor() {}
 
   ngOnInit() {
     if (this.emails.length > 0) {
       this.selectedEmails.push(this.emails[0]);
+      this.mailUpdated.emit(this.selectedEmails);
     }
   }
 
@@ -27,6 +29,6 @@ export class MailChooserComponent implements OnInit {
     } else {
       this.selectedEmails = this.selectedEmails.filter(mail => mail !== $event.target.name);
     }
-    console.log(this.selectedEmails);
+    this.mailUpdated.emit(this.selectedEmails);
   }
 }
