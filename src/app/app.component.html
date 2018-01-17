@@ -1,10 +1,5 @@
 <app-navbar></app-navbar>
 
 <div class="container">
-  <mail-chooser (mailUpdated)="handleMailUpdated($event)"></mail-chooser>
-  <div class="row">
-    <div class="col-xs-12">
-      <a href="#" class="btn btn-block btn-lg btn-primary" (click)="sendMails()">Envoyer</a>
-    </div>
-  </div>
+  <router-outlet></router-outlet>
 </div>
