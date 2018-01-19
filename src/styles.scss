@@ -4,7 +4,7 @@ body {
   background-image: url("assets/patterns/memphis-colorful.png");
 }
 
-p {
+* {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
   @include font-size(18px);
