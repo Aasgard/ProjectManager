@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "id_categorie": "eb100df2-0de5-4063-9f77-3a4a6ccb8339",
+      "nom_categorie": "domotique"
+    },
+    {
+      "id_categorie": "af71c2d2-5142-4f13-a929-6ebf5d43a07c",
+      "nom_categorie": "web"
+    },
+    {
+      "id_categorie": "877ea59e-4bbd-4f4f-ac58-a0e7891d8eec",
+      "nom_categorie": "mobile"
+    },
+    {
+      "id_categorie": "16338076-ab9c-4c5b-a9ce-51e0ae0aff2d",
+      "nom_categorie": "autre"
+    }
+  ]
+}

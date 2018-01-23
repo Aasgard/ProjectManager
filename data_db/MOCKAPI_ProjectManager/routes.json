@@ -1,0 +1,6 @@
+{
+  "/api/projets": "/projets",
+  "/api/categories": "/categories",
+  "/api/taches": "/taches",
+  "/api/documents": "/documents"
+}
