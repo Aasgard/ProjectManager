@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
+import { DocumentsService } from '../../providers/documents/documents.service';
 
 @Component({
   selector: 'app-home-page',
@@ -8,9 +9,21 @@ import {Router} from '@angular/router';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  private documents: Document[] = [];
+
+  constructor(
+    private router: Router,
+    private documentsService: DocumentsService
+  ) { }
 
   ngOnInit() {
+    this.documentsService.getDocuments().subscribe((data: Document[]) => {
+      if (data.length > 0) {
+        data.forEach(document => {
+          this.documents.push(document);
+        });
+      }
+    });
   }
 
 }
