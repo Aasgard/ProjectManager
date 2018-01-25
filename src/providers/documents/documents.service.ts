@@ -10,7 +10,7 @@ export class DocumentsService {
   ) {}
 
   public getDocuments(): Observable<Document[]> {
-    return this.http.get<Document[]>('http://localhost:3000/data');
+    return this.http.get<Document[]>('http://localhost:3000/documents');
   }
 
 }

@@ -17,12 +17,13 @@ export class HomePageComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.documentsService.getDocuments().subscribe((data: Document[]) => {
-      if (data.length > 0) {
-        data.forEach(document => {
+    this.documentsService.getDocuments().subscribe((res: any) => {
+      if (res.data.length > 0) {
+        res.data.forEach(document => {
           this.documents.push(document);
         });
       }
+      console.log(this.documents);
     });
   }
 
